@@ -1,0 +1,132 @@
+<!-- <section class="sponsors-section py-5 bg-light">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="display-6 fw-bold text-primary mb-3">Patrocinadores e Apoiadores</h2>
+        <p class="lead text-muted">Empresas e instituições que tornam este evento possível</p>
+      </div>
+    </div>
+
+    <div class="sponsor-category mb-5" *ngIf="getPatrocinadoresPorCategoria('ouro').length > 0">
+      <h4 class="text-center mb-4 sponsor-category-title gold">
+        <i class="fas fa-medal me-2"></i>Patrocinadores Ouro
+      </h4>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-3 col-md-4 col-6" *ngFor="let sponsor of getPatrocinadoresPorCategoria('ouro')">
+          <div class="sponsor-card gold">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-category mb-5" *ngIf="getPatrocinadoresPorCategoria('prata').length > 0">
+      <h5 class="text-center mb-4 sponsor-category-title silver">
+        <i class="fas fa-medal me-2"></i>Patrocinadores Prata
+      </h5>
+      <div class="row justify-content-center g-3">
+        <div class="col-lg-2 col-md-3 col-4" *ngFor="let sponsor of getPatrocinadoresPorCategoria('prata')">
+          <div class="sponsor-card silver">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-category mb-4" *ngIf="getPatrocinadoresPorCategoria('bronze').length > 0">
+      <h6 class="text-center mb-3 sponsor-category-title bronze">
+        <i class="fas fa-medal me-2"></i>Patrocinadores Bronze
+      </h6>
+      <div class="row justify-content-center g-3">
+        <div class="col-lg-2 col-md-3 col-4" *ngFor="let sponsor of getPatrocinadoresPorCategoria('bronze')">
+          <div class="sponsor-card bronze">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor-category" *ngIf="getPatrocinadoresPorCategoria('apoio').length > 0">
+      <h6 class="text-center mb-3 sponsor-category-title support">
+        <i class="fas fa-handshake me-2"></i>Apoio
+      </h6>
+      <div class="row justify-content-center g-2">
+        <div class="col-lg-2 col-md-3 col-4" *ngFor="let sponsor of getPatrocinadoresPorCategoria('apoio')">
+          <div class="sponsor-card support">
+            <img [src]="sponsor.logo" [alt]="sponsor.name" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<footer id="contato" class="main-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 col-md-12">
+        <div class="footer-section">
+          <div class="footer-logo mb-4">
+            <img src="assets/logo.png" alt="Logo VI CIPEL" class="img-fluid mb-3" style="max-height: 80px;">
+            <h5 class="text-white fw-bold">VI CIPEL 2025</h5>
+            <p class="text-white-75">Congresso Internacional de Pecuária Leiteira da Amazônia Ocidental</p>
+          </div>
+          
+          <div class="event-info">
+            <div class="info-item mb-2">
+              <i class="fas fa-calendar-alt text-warning me-2"></i>
+              <span class="text-white">30 de Outubro a 01 de Novembro de 2025</span>
+            </div>
+            <div class="info-item mb-2">
+              <i class="fas fa-map-marker-alt text-warning me-2"></i>
+              <span class="text-white">Acre, Brasil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-lg-7 col-md-12">
+        <div class="footer-section mb-5">
+          <h5 class="text-white fw-bold mb-4">
+            <i class="fas fa-share-alt me-2 text-warning"></i>Siga-nos
+          </h5>
+          <div class="social-links">
+            <a [href]="social.link"
+               class="social-link me-3"
+               *ngFor="let social of redesSociais"
+               target="_blank"
+               rel="noopener noreferrer">
+              <i [class]="social.icon"></i>
+            </a>
+          </div>
+        </div> -->
+
+        <!-- <div class="footer-section">
+          <h5 class="text-white fw-bold mb-4">
+            <i class="fas fa-phone me-2 text-warning"></i>Contatos
+          </h5>
+          <div class="contact-list">
+            <a [href]="contato.link || '#'"
+               class="contact-link"
+               [class.no-link]="!contato.link"
+               *ngFor="let contato of contatos">
+              <i [class]="contato.icon + ' text-warning contact-icon'"></i>
+              <div class="contact-text">
+                <small class="text-white-50 d-block">{{ contato.type }}</small>
+                <span class="text-white">{{ contato.value }}</span>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    <!-- </div> -->
+
+    <div class="row mt-5 pt-4 border-top border-secondary">
+      <div class="col-md-6">
+        <p class="text-white-50 mb-0">
+          © {{ getCurrentYear() }} VI CIPEL. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>

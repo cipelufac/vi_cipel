@@ -1,0 +1,75 @@
+<section id="inicio" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-100 py-5">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <div class="event-badge mb-4">
+            <span class="badge bg-primary fs-6 px-3 py-2">{{ eventInfo.date }}</span>
+          </div>
+          
+          <h1 class="display-4 fw-bold text-white mb-4">
+            {{ eventInfo.title }}
+          </h1>
+          
+          <div class="location-info mb-4">
+            <i class="fas fa-map-marker-alt text-warning me-2"></i>
+            <span class="text-white fs-5">{{ eventInfo.location }}</span>
+          </div>
+          
+          <p class="lead text-white-75 mb-5">
+            {{ eventInfo.description }}
+          </p>
+          
+          <div class="hero-actions">
+            <a href="https://www.even3.com.br/cipel-vi-congresso-internacional-de-pecuaria-leiteira-da-amazonia-ocidental-568857/" class="btn btn-warning btn-lg me-3 mb-3">
+              <i class="fas fa-ticket-alt me-2"></i>
+              Inscreva-se Agora
+            </a>
+            <button 
+              class="btn btn-outline-light btn-lg mb-3"
+              (click)="scrollToSection('programacao')">
+              <i class="fas fa-calendar me-2"></i>
+              Ver Programação
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="hero-image">
+          <img 
+            src="assets/logo.png"
+            alt="Logo VI CIPEL" 
+            class="img-fluid logo-hero">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Highlights Section -->
+  <div class="highlights-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-center text-white mb-5">Destaques do Evento</h3>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" *ngFor="let highlight of eventInfo.highlights; let i = index">
+          <div class="highlight-card text-center">
+            <div class="highlight-icon mb-3">
+              <i class="fas" 
+                 [ngClass]="{
+                   'fa-users': i === 0,
+                   'fa-tools': i === 1,
+                   'fa-store': i === 2,
+                   'fa-handshake': i === 3
+                 }"></i>
+            </div>
+            <p class="text-white mb-0">{{ highlight }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,160 @@
+.sponsors-section {
+  .sponsor-category-title {
+    font-weight: 600;
+  }
+  .sponsor-category-title.gold {
+    color: #ffd700;
+  }
+  .sponsor-category-title.silver {
+    color: #c0c0c0;
+  }
+  .sponsor-category-title.bronze {
+    color: #cd7f32;
+  }
+  .sponsor-category-title.support {
+    color: var(--text-muted);
+  }
+
+  .sponsor-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  .sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  .sponsor-card.gold {
+    border: 3px solid #ffd700;
+  }
+  .sponsor-card.gold:hover {
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.3);
+  }
+  .sponsor-card.silver {
+    border: 2px solid #c0c0c0;
+  }
+  .sponsor-card.silver:hover {
+    box-shadow: 0 15px 30px rgba(192, 192, 192, 0.3);
+  }
+  .sponsor-card.bronze {
+    border: 2px solid #cd7f32;
+  }
+  .sponsor-card.bronze:hover {
+    box-shadow: 0 15px 30px rgba(205, 127, 50, 0.3);
+  }
+  .sponsor-card.support {
+    border: 1px solid #dee2e6;
+  }
+  .sponsor-card img {
+    max-height: 60px;
+    width: auto;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+  .sponsor-card:hover img {
+    filter: grayscale(0%);
+  }
+}
+
+.main-footer {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+.main-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerGrain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23footerGrain)"/></svg>');
+  opacity: 0.3;
+}
+.main-footer .container {
+  position: relative;
+  z-index: 2;
+}
+.main-footer .text-white-75 {
+  color: rgba(255, 255, 255, 0.85);
+}
+.main-footer .text-white-50 {
+  color: rgba(255, 255, 255, 0.6);
+}
+.main-footer .footer-section h5, .main-footer .footer-section h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* === ESTILOS DE CONTATO ATUALIZADOS === */
+.main-footer .contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* Espaçamento reduzido entre os itens */
+}
+.main-footer .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem; /* Padding reduzido para um card mais compacto */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px; /* Bordas um pouco menos arredondadas */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.main-footer .contact-link:hover:not(.no-link) {
+  transform: translateY(-3px); /* Efeito de hover mais sutil */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.main-footer .contact-link.no-link {
+  cursor: default;
+}
+.main-footer .contact-icon {
+    font-size: 1.2rem; /* Ícone um pouco menor */
+}
+/* === FIM DOS ESTILOS DE CONTATO === */
+
+.main-footer .social-links .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+.main-footer .social-links .social-link:hover {
+  background: var(--warning-yellow);
+  color: var(--text-dark);
+  transform: translateY(-3px);
+}
+.main-footer .social-links .social-link i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .sponsor-card {
+    padding: 1rem;
+  }
+  .sponsor-card img {
+    max-height: 40px;
+  }
+
+  .main-footer {
+    padding: 3rem 0 1.5rem;
+    text-align: center;
+  }
+  
+  .main-footer .contact-list,
+  .main-footer .social-links {
+      justify-content: center;
+  }
+}
