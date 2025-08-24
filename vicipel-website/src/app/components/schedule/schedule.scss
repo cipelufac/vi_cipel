@@ -104,4 +104,65 @@
   .schedule-item .time-badge {
     margin-bottom: 1rem;
   }
+}@media (max-width: 768px) {
+
+  /* --- Seção de Programação --- */
+  .programacao-section {
+    
+    // MELHORIA: Torna as abas roláveis horizontalmente em vez de quebrar a linha
+    .nav-pills {
+      display: flex;
+      flex-wrap: nowrap;     // Impede que os botões quebrem para a linha de baixo
+      overflow-x: auto;      // Adiciona a rolagem horizontal
+      padding-bottom: 1rem;  // Cria espaço para a sombra e a barra de rolagem
+      justify-content: flex-start; // Alinha os itens ao início
+      -webkit-overflow-scrolling: touch; // Melhora a experiência de rolagem em iOS
+
+      // Esconde a barra de rolagem visualmente para um look mais limpo
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .nav-pills .nav-link {
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      flex-shrink: 0; // Impede que os botões encolham
+    }
+
+    .schedule-item {
+      padding: 1.25rem;
+      // MELHORIA: Centraliza o conteúdo quando ele é empilhado
+      text-align: center;
+    }
+    
+    .schedule-item .time-badge {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  .palestrantes-section {
+
+    .speaker-card {
+      &:hover {
+        transform: translateY(0);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .speaker-info {
+      padding: 1.25rem; 
+    }
+    
+    .speaker-icon {
+      font-size: 1.3rem;
+    }
+
+    .speaker-name {
+      font-size: 1.1rem; 
+    }
+  }
+
 }

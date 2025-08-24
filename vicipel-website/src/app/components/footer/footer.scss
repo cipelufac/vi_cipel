@@ -88,6 +88,14 @@
   font-family: "Raleway", sans-serif;
 }
 
+.main-footer .border-top{
+  border-color: rgba(255, 255, 255, 0.2) !important; 
+}
+
+.main-footer .copyright-text {
+  font-size: 0.9rem;
+}
+
 /* === ESTILOS DE CONTATO ATUALIZADOS === */
 .main-footer .contact-list {
   display: flex;
