@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
 interface Palestrante {
   name: string
   // position: string
-  // enterprise: string
-  // photo: string
+  enterprise: string | null
+  photo?: string
   // bio: string
 }
 
@@ -35,37 +35,75 @@ export class Schedule {
 
   palestrantes: Palestrante[] = [
     {
-      name: "José Pantoja",
+      name: "Prof. Dr. José Pantoja",
       // position: "CEO",
-      // enterprise: "Empresa 1",
-      // photo: "foto1.jpg",
+      enterprise: "FMVZ UNESP-Botucatu",
+      photo: "assets/speakers/pantoja.jpeg",
       // bio: "Bio do palestrante 1"
     },
     {
-      name: "Jamilly Wesgueber",
+      name: "Dra. Jamilly Wesgueber",
       // position: "CTO",
-      // enterprise: "Empresa 2",
-      // photo: "foto2.jpg",
+      enterprise: "CEO JW Consultoria",
+      photo: "assets/speakers/jamilly.jpg",
       // bio: "Bio do palestrante 2"
     },
     {
       name: "Kolowyskys Dantas",
       // position: "Analista",
-      // enterprise: "Empresa 3",
-      // photo: "foto3.jpg",
+      enterprise: "Presidente da Assoc. Brasileira de Buiatria",
+      photo: "assets/speakers/kolo.jpg",
       // bio: "Bio do palestrante 3"
     },
     {
-      name: "Nivaldo Michetti"
+      name: "Nivaldo Michetti",
+      enterprise: "Produtor rural"
     },
     {
-      name: "Ernesto Coser"
+      name: "Ernesto Coser",
+      enterprise: "Méd. Veterinário e Gerente de Produtos da Datamars Trutest",
+      photo: "assets/speakers/ernesto.jpg"
     },
     {
-      name: "Andre Navarro"
+      name: "Andre Navarro",
+      enterprise: "Gerente Distrital na Alta Genetics",
+      photo: "assets/speakers/andre.jpg"
     },
     {
-      name: "Felipe Moura"
+      name: "Felipe Moura",
+      enterprise: "Pastus Agrotecnologia",
+      photo: "assets/speakers/felipe.jpg"
+    },
+    {
+      name: "IBGE",
+      enterprise: null,
+      photo: "assets/speakers/ibge.png"
+    },
+    {
+      name: "SEBRAE-AC",
+      enterprise: null,
+      photo: "assets/speakers/sebrae.png"
+    },
+    {
+      name: "Jaílson Barbosa",
+      enterprise: "SEBRAE-AC"
+    },
+    {
+      name: "Dr. Judson Valentim",
+      enterprise: "EMBRAPA-AC"
+    },
+    {
+      name: "Prof. Vadick Fernandez Romero ",
+      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
+    },
+    {
+      name: "Prof. Juan Tomás Bejarano Alvaréz",
+      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
+    },
+    {
+      name: "Dr. Moacyr Dias Filho",
+      enterprise: "EMBRAPA-BELÉM",
+      photo: "assets/speakers/moacyr.jpeg"
     }
   ]
 
@@ -98,28 +136,28 @@ export class Schedule {
         {
           startTime: "09:00 - 09:30",
           title: "Dados da Pecuária Leiteira no Acre - IBGE",
-          speaker: null,
+          speaker: this.palestrantes[7].name,
           type: "palestra",
           description: null
         },
         {
           startTime: "09:30 - 10:00",
           title: "Projeto de Pecuária de Leite do Sebrae",
-          speaker: null,
+          speaker: this.palestrantes[8].name,
           type: "palestra",
           description: null
         },
         {
           startTime: "10:00 - 10:30",
           title: "Sucessão Familiar em Propriedades Rurais",
-          speaker: null,
+          speaker: this.palestrantes[9].name,
           type: "pausa",
           description: null
         },
         {
           startTime: "10:45 - 12:00",
           title: "Pecuária Leiteira no Acre: Histórico, desafios e oportunidades",
-          speaker: null,
+          speaker: this.palestrantes[10].name,
           type: "palestra",
           description: null
         },
@@ -133,7 +171,7 @@ export class Schedule {
         {
           startTime: "14:00 - 15:00",
           title: "Controle Biológico de Carrapatos com Fungos",
-          speaker: null,
+          speaker: this.palestrantes[11].name,
           type: "palestra",
           description: null
         },
@@ -154,7 +192,7 @@ export class Schedule {
         {
           startTime: "16:30 - 17:30",
           title: "Protocolos IATF na Pecuária Leiteira: utilização e benefícios",
-          speaker: null,
+          speaker: this.palestrantes[12].name,
           type: "palestra",
           description: null
         },
@@ -182,7 +220,7 @@ export class Schedule {
         {
           startTime: "10:00 - 11:00",
           title: "Degradação de Pastagens na Amazônia",
-          speaker: null,
+          speaker: this.palestrantes[13].name,
           type: "palestra",
           description: null
         },
@@ -252,7 +290,7 @@ export class Schedule {
         {
           startTime: "08:00 - 12:00",
           title: "Dia de Campo",
-          speaker: null,
+          speaker: this.palestrantes[0].name,
           type: "abertura",
           description: null
         },

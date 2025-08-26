@@ -11,7 +11,6 @@ interface Contato {
 interface Patrocinador {
   name: string
   logo: string
-  category: "ouro" | "prata" | "bronze" | "apoio"
 }
 
 @Component({
@@ -53,24 +52,32 @@ export class Footer {
   
   patrocinadores: Patrocinador[] = [
     {
-      name: "Patrocinador 1",
+      name: "Embrapa",
       logo: "logo1.png",
-      category: "ouro"
     },
     {
-      name: "Patrocinador 2",
+      name: "Seagro",
       logo: "logo2.png",
-      category: "prata"
     },
     {
-      name: "Patrocinador 3",
+      name: "Seagri",
       logo: "logo3.png",
-      category: "bronze"
     },
     {
-      name: "Patrocinador 4",
+      name: "Fórum de Desenvolvimento",
       logo: "logo4.png",
-      category: "apoio"
+    },
+    {
+      name: "SENAR/FIEAC",
+      logo: "logo5.png"
+    },
+    {
+      name: "SEBRAE",
+      logo: "logo6.png"
+    },
+    {
+      name: "UFAC",
+      logo: "logo5.png"
     }
   ]
 
@@ -95,20 +102,8 @@ export class Footer {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.patrocinadoresOuro = this.patrocinadores.filter(p => p.category === 'ouro');
-    this.patrocinadoresPrata = this.patrocinadores.filter(p => p.category === 'prata');
-    this.patrocinadoresBronze = this.patrocinadores.filter(p => p.category === 'bronze');
-    this.patrocinadoresApoio = this.patrocinadores.filter(p => p.category === 'apoio');
-  }
-
 
   getCurrentYear(): number {
     return new Date().getFullYear();
-  }
-
-  getPatrocinadoresPorCategoria(categoria: string):
-  Patrocinador[] {
-    return this.patrocinadores.filter(p => p.category === categoria);
   }
 }

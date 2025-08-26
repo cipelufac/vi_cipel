@@ -162,9 +162,13 @@
     <div class="row g-4 justify-content-center">
       <div class="col-lg-4 col-md-6" *ngFor="let palestrante of palestrantes">
         <div class="speaker-card h-100">
-          <div class="speaker-info">
-            <i class="fas fa-user speaker-icon me-3"></i>
-            <h5 class="speaker-name mb-0">{{ palestrante.name }}</h5>
+          <div class="speaker-content"> <div class="speaker-media"> <img *ngIf="palestrante.photo" [src]="palestrante.photo" alt="Foto de {{ palestrante.name }}" class="speaker-photo">
+              <i *ngIf="!palestrante.photo" class="fas fa-user-circle speaker-icon-fallback"></i> </div>
+            <div class="speaker-info"> <h5 class="speaker-name mb-2">{{ palestrante.name }}</h5>
+              <p class="speaker-enterprise text-muted mb-0" *ngIf="palestrante.enterprise">
+                <i class="fas fa-building me-2"></i>{{ palestrante.enterprise }}
+              </p>
+            </div>
           </div>
         </div>
       </div>

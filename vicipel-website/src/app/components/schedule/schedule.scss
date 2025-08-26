@@ -67,28 +67,72 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
   }
   .speaker-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
 
-  .speaker-info {
-    padding: 1.5rem;
+  .speaker-content {
+    display: flex;
+    align-self: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .speaker-media {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f0f0f0;
+  }
+
+  .speaker-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .speaker-icon-fallback {
+    font-size: 3rem;
+    color: var(--text-muted);
   }
   
-  .speaker-icon {
-      font-size: 1.5rem;
-      color: var(--primary-green);
+  .speaker-info {
+    // padding: 1.5rem;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-start;
+    flex-grow: 1;
   }
+  
+  // .speaker-icon {
+  //     font-size: 1.5rem;
+  //     color: var(--primary-green);
+  // }
 
   .speaker-name {
     color: var(--text-dark);
     font-weight: 700;
   }
+
+  .speaker-enterprise{
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .speaker-enterprise i {
+    opacity: 0.7;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -104,21 +148,18 @@
   .schedule-item .time-badge {
     margin-bottom: 1rem;
   }
-}@media (max-width: 768px) {
-
+  
+@media (max-width: 768px) {
   /* --- Seção de Programação --- */
   .programacao-section {
-    
-    // MELHORIA: Torna as abas roláveis horizontalmente em vez de quebrar a linha
     .nav-pills {
       display: flex;
-      flex-wrap: nowrap;     // Impede que os botões quebrem para a linha de baixo
-      overflow-x: auto;      // Adiciona a rolagem horizontal
-      padding-bottom: 1rem;  // Cria espaço para a sombra e a barra de rolagem
-      justify-content: flex-start; // Alinha os itens ao início
-      -webkit-overflow-scrolling: touch; // Melhora a experiência de rolagem em iOS
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      justify-content: flex-start;
+      -webkit-overflow-scrolling: touch;
 
-      // Esconde a barra de rolagem visualmente para um look mais limpo
       &::-webkit-scrollbar {
         display: none;
       }
@@ -128,12 +169,11 @@
       margin: 0 0.25rem;
       padding: 0.5rem 1rem;
       font-size: 0.9rem;
-      flex-shrink: 0; // Impede que os botões encolham
+      flex-shrink: 0;
     }
 
     .schedule-item {
       padding: 1.25rem;
-      // MELHORIA: Centraliza o conteúdo quando ele é empilhado
       text-align: center;
     }
     
@@ -142,27 +182,40 @@
     }
   }
 
-
+  /* --- Seção de Palestrantes - Melhorias na Responsividade --- */
   .palestrantes-section {
-
     .speaker-card {
-      &:hover {
-        transform: translateY(0);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
+      padding: 1.5rem 1rem; /* Ajustei um pouco o padding para o card inteiro em mobile */
+      text-align: center; /* Centraliza todo o texto dentro do card */
     }
-
+    .speaker-content {
+      flex-direction: column; /* Empilha a imagem/ícone e o texto */
+      align-items: center;   /* Centraliza horizontalmente os itens empilhados */
+      gap: 1rem; /* Espaçamento mais generoso entre a foto/ícone e o bloco de texto */
+    }
+    .speaker-media {
+      width: 70px; /* Levemente maior que 60px para melhor visualização */
+      height: 70px;
+    }
+    .speaker-icon-fallback {
+      font-size: 3rem; /* Mantive um tamanho bom para o ícone de fallback */
+    }
     .speaker-info {
-      padding: 1.25rem; 
+      display: flex; /* Transforma o container de nome e empresa em flex */
+      flex-direction: column; /* Empilha nome e empresa */
+      align-items: center;   /* Centraliza horizontalmente nome e empresa */
     }
-    
-    .speaker-icon {
-      font-size: 1.3rem;
-    }
-
     .speaker-name {
-      font-size: 1.1rem; 
+      font-size: 1.2rem; /* Aumentei um pouco para ter mais destaque */
+      margin-bottom: 0.5rem !important; /* Mantém o espaçamento ajustado */
+    }
+    .speaker-enterprise {
+      font-size: 0.85rem; /* Levemente menor para a empresa, se necessário */
+    }
+    .speaker-card:hover {
+      transform: translateY(0); /* Desativa o efeito de hover em mobile para não interferir */
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Mantém a sombra base */
     }
   }
-
+}
 }
