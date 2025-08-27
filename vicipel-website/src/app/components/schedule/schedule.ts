@@ -12,7 +12,7 @@ interface Palestrante {
 interface Sessao{
   startTime: string
   title: string
-  speaker?: string | null
+  speaker?: string[] | null
   type: "palestra" | "workshop" | "pausa" | "abertura" | "encerramento"
   description: string | null
 }
@@ -35,6 +35,7 @@ export class Schedule {
 
   palestrantes: Palestrante[] = [
     {
+      //0
       name: "Prof. Dr. José Pantoja",
       // position: "CEO",
       enterprise: "FMVZ UNESP-Botucatu",
@@ -42,6 +43,7 @@ export class Schedule {
       // bio: "Bio do palestrante 1"
     },
     {
+      //1
       name: "Dra. Jamilly Wesgueber",
       // position: "CTO",
       enterprise: "CEO JW Consultoria",
@@ -49,6 +51,7 @@ export class Schedule {
       // bio: "Bio do palestrante 2"
     },
     {
+      //2
       name: "Kolowyskys Dantas",
       // position: "Analista",
       enterprise: "Presidente da Assoc. Brasileira de Buiatria",
@@ -56,54 +59,85 @@ export class Schedule {
       // bio: "Bio do palestrante 3"
     },
     {
+      //3
       name: "Nivaldo Michetti",
       enterprise: "Produtor rural"
     },
     {
-      name: "Ernesto Coser",
+      //4
+      name: "Med. Vet. Ernesto Coser",
       enterprise: "Méd. Veterinário e Gerente de Produtos da Datamars Trutest",
       photo: "assets/speakers/ernesto.jpg"
     },
     {
+      //5
       name: "Andre Navarro",
       enterprise: "Gerente Distrital na Alta Genetics",
       photo: "assets/speakers/andre.jpg"
     },
     {
+      //6
       name: "Felipe Moura",
       enterprise: "Pastus Agrotecnologia",
       photo: "assets/speakers/felipe.jpg"
     },
     {
+      //7
       name: "IBGE",
       enterprise: null,
       photo: "assets/speakers/ibge.png"
     },
     {
+      //8
       name: "SEBRAE-AC",
       enterprise: null,
       photo: "assets/speakers/sebrae.png"
     },
     {
+      //9
       name: "Jaílson Barbosa",
       enterprise: "SEBRAE-AC"
     },
     {
+      //10
       name: "Dr. Judson Valentim",
       enterprise: "EMBRAPA-AC"
     },
     {
+      //11
       name: "Prof. Vadick Fernandez Romero ",
       enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
     },
     {
+      //12
       name: "Prof. Juan Tomás Bejarano Alvaréz",
       enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
     },
     {
-      name: "Dr. Moacyr Dias Filho",
-      enterprise: "EMBRAPA-BELÉM",
-      photo: "assets/speakers/moacyr.jpeg"
+      //13
+      name: "Sra. Maria do Carmo",
+      enterprise: "Produtor rural",
+      // photo: "assets/speakers/moacyr.jpeg"
+    },
+    {
+      //14
+      name: "Med. Vet. Jean Paulo Cabral",
+      enterprise: "Norte Rebanho"
+    },
+    {
+      //15
+      name: "Sr. Maurício Gomes",
+      enterprise: "Produtor rural"
+    },
+    {
+      //16
+      name: "Sra. Andreza Scherlosk",
+      enterprise: "Produtora rural"
+    },
+    {
+      //17
+      name: "Sr. Rodrigo Novaes",
+      enterprise: "Produtor rural"
     }
   ]
 
@@ -127,38 +161,31 @@ export class Schedule {
           description: null
         },
         {
-          startTime: "08:30 - 09:00",
+          startTime: "08:30 - 09:30",
           title: "Abertura",
           speaker: null,
           type: "abertura",
           description: null
         },
         {
-          startTime: "09:00 - 09:30",
-          title: "Dados da Pecuária Leiteira no Acre - IBGE",
-          speaker: this.palestrantes[7].name,
-          type: "palestra",
-          description: null
-        },
-        {
           startTime: "09:30 - 10:00",
-          title: "Projeto de Pecuária de Leite do Sebrae",
-          speaker: this.palestrantes[8].name,
-          type: "palestra",
-          description: null
-        },
-        {
-          startTime: "10:00 - 10:30",
           title: "Sucessão Familiar em Propriedades Rurais",
-          speaker: this.palestrantes[9].name,
-          type: "pausa",
+          speaker: [this.palestrantes[9].name],
+          type: "palestra",
           description: null
         },
         {
-          startTime: "10:45 - 12:00",
-          title: "Pecuária Leiteira no Acre: Histórico, desafios e oportunidades",
-          speaker: this.palestrantes[10].name,
+          startTime: "10:00 - 11:00",
+          title: "Quais as vantagens e os desafios da utilização da transferência de embriões em gado leiteiro? ",
+          speaker: [this.palestrantes[14].name],
           type: "palestra",
+          description: null
+        },
+        {
+          startTime: "11:00 - 12:00",
+          title: "Pecuária Leiteira no Acre: Histórico, desafios e oportunidades ",
+          speaker: [this.palestrantes[10].name],
+          type: "pausa",
           description: null
         },
         {
@@ -170,20 +197,20 @@ export class Schedule {
         },
         {
           startTime: "14:00 - 15:00",
-          title: "Controle Biológico de Carrapatos com Fungos",
-          speaker: this.palestrantes[11].name,
+          title: "Uso da cerca elétrica como ferramenta para otimizar a eficiência do pastejo ",
+          speaker: [this.palestrantes[4].name],
           type: "palestra",
           description: null
         },
         {
-          startTime: "15:00 - 16:00",
-          title: "Como Criar Bezerras Leiteiras",
-          speaker: this.palestrantes[1].name,
+          startTime: "15:00 - 16:10",
+          title: "Controle biológico de carrapatos com fungos ",
+          speaker: [this.palestrantes[11].name],
           type: "workshop",
           description: null
         },
         {
-          startTime: "16:00 - 16:30",
+          startTime: "16:10 - 16:30",
           title: "Milk Break",
           speaker: null,
           type: "pausa",
@@ -192,7 +219,7 @@ export class Schedule {
         {
           startTime: "16:30 - 17:30",
           title: "Protocolos IATF na Pecuária Leiteira: utilização e benefícios",
-          speaker: this.palestrantes[12].name,
+          speaker: [this.palestrantes[12].name],
           type: "palestra",
           description: null
         },
@@ -204,30 +231,30 @@ export class Schedule {
       day: "Sexta-feira",
       sessions: [
         {
-          startTime: "08:00 - 09:00",
+          startTime: "07:30 - 08:30",
           title: "Café da manhã e Apresentação de Resumos",
           speaker: null,
           type: "abertura",
           description: null
         },
         {
-          startTime: "09:00 - 10:00",
+          startTime: "08:00 - 09:30",
           title: "A Diferença entre Ver e Enxergar Seu Pasto: Estratégias de manejo",
-          speaker: this.palestrantes[6].name,
+          speaker: [this.palestrantes[6].name],
           type: "palestra",
           description: null
         },
         {
-          startTime: "10:00 - 11:00",
-          title: "Degradação de Pastagens na Amazônia",
-          speaker: this.palestrantes[13].name,
+          startTime: "09:40 - 10:40",
+          title: "Manejos primordiais na criação de bezerras",
+          speaker: [this.palestrantes[1].name],
           type: "palestra",
           description: null
         },
         {
-          startTime: "11:00 - 12:00",
-          title: "Uso da Cerca Elétrica como Ferramenta para Otimizar a Eficiência do Pastejo",
-          speaker: this.palestrantes[4].name,
+          startTime: "10:50 - 11:50",
+          title: "Papel do Buiatra na Pecuária ",
+          speaker: [this.palestrantes[2].name],
           type: "palestra",
           description: null
         },
@@ -239,47 +266,40 @@ export class Schedule {
           description: null
         },
         {
-          startTime: "14:00 - 15:00",
-          title: "Novas Abordagens no Tratamento da Mastite",
-          speaker: this.palestrantes[0].name,
+          startTime: "14:00 - 14:50",
+          title: "Indicadores Reprodutivos e a importância econômica em fazendas leiteiras ",
+          speaker: [this.palestrantes[5].name],
           type: "palestra",
           description: null
         },
         {
           startTime: "15:00 - 16:00",
-          title: "Indicadores Reprodutivos e a Importância Econômica em Fazendas Leiteiras",
-          speaker: this.palestrantes[5].name,
+          title: "Experiências do campo – Produtores de leite do Acre",
+          speaker: [
+            this.palestrantes[13].name,
+            this.palestrantes[15].name,
+            this.palestrantes[16].name,
+            this.palestrantes[17].name
+          ],
           type: "palestra",
           description: null
         },
         {
-          startTime: "16:00 - 16:30",
+          startTime: "16:00 - 16:20",
           title: "Milk Break",
           speaker: null,
           type: "pausa",
           description: null
         },
         {
-          startTime: "16:30 - 17:30",
+          startTime: "16:20 - 17:00",
           title: "Mudando de Vida com a Produção de Leite",
-          speaker: this.palestrantes[3].name,
+          speaker: [
+            this.palestrantes[3].name
+          ],
           type: "palestra",
           description: null
         },
-        {
-          startTime: "17:30 - 18:00",
-          title: "Premiação dos Melhores Resumos",
-          speaker: null,
-          type: "encerramento",
-          description: null
-        },
-        {
-          startTime: "18:00 - 23:00",
-          title: "Confraternização",
-          speaker: null,
-          type: "encerramento",
-          description: null
-        }
       ]
     },
 
@@ -289,10 +309,10 @@ export class Schedule {
       sessions: [
         {
           startTime: "08:00 - 12:00",
-          title: "Dia de Campo",
-          speaker: this.palestrantes[0].name,
+          title: "Dia de Campo - Rancho São Bento (Rio Branco)",
+          speaker: [this.palestrantes[0].name],
           type: "abertura",
-          description: null
+          description: "Estações: Manejo de Pastagens; Reprodução; Qualidade de leite"
         },
       ]
     }
