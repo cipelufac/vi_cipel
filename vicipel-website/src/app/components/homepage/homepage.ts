@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Resumos } from '../resumos/resumos';
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule],
+  imports: [CommonModule, Resumos],
   templateUrl: './homepage.html',
   styleUrl: './homepage.scss'
 })

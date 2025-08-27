@@ -148,7 +148,7 @@
   .schedule-item .time-badge {
     margin-bottom: 1rem;
   }
-  
+
 @media (max-width: 768px) {
   /* --- Seção de Programação --- */
   .programacao-section {
@@ -182,39 +182,38 @@
     }
   }
 
-  /* --- Seção de Palestrantes - Melhorias na Responsividade --- */
   .palestrantes-section {
     .speaker-card {
-      padding: 1.5rem 1rem; /* Ajustei um pouco o padding para o card inteiro em mobile */
-      text-align: center; /* Centraliza todo o texto dentro do card */
+      padding: 1.5rem 1rem; 
+      text-align: center; 
     }
     .speaker-content {
-      flex-direction: column; /* Empilha a imagem/ícone e o texto */
-      align-items: center;   /* Centraliza horizontalmente os itens empilhados */
-      gap: 1rem; /* Espaçamento mais generoso entre a foto/ícone e o bloco de texto */
+      flex-direction: column; 
+      align-items: center;   
+      gap: 1rem; 
     }
     .speaker-media {
-      width: 70px; /* Levemente maior que 60px para melhor visualização */
+      width: 70px; 
       height: 70px;
     }
     .speaker-icon-fallback {
-      font-size: 3rem; /* Mantive um tamanho bom para o ícone de fallback */
+      font-size: 3rem; 
     }
     .speaker-info {
-      display: flex; /* Transforma o container de nome e empresa em flex */
-      flex-direction: column; /* Empilha nome e empresa */
-      align-items: center;   /* Centraliza horizontalmente nome e empresa */
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;  
     }
     .speaker-name {
-      font-size: 1.2rem; /* Aumentei um pouco para ter mais destaque */
-      margin-bottom: 0.5rem !important; /* Mantém o espaçamento ajustado */
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem !important; 
     }
     .speaker-enterprise {
-      font-size: 0.85rem; /* Levemente menor para a empresa, se necessário */
+      font-size: 0.85rem; 
     }
     .speaker-card:hover {
-      transform: translateY(0); /* Desativa o efeito de hover em mobile para não interferir */
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Mantém a sombra base */
+      transform: translateY(0); 
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
     }
   }
 }
