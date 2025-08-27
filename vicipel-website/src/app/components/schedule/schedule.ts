@@ -253,7 +253,7 @@ export class Schedule {
         },
         {
           startTime: "10:50 - 11:50",
-          title: "Papel do Buiatra na Pecuária ",
+          title: "Atuação do Buiatra em Medicina Veterinária de Produção",
           speaker: [this.palestrantes[2].name],
           type: "palestra",
           description: null
