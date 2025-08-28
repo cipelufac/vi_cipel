@@ -61,17 +61,18 @@ export class Schedule {
     {
       //3
       name: "Nivaldo Michetti",
-      enterprise: "Produtor rural"
+      enterprise: "Produtor rural",
+      photo: "assets/speakers/nivaldo.jpg"
     },
     {
       //4
       name: "Med. Vet. Ernesto Coser",
       enterprise: "Méd. Veterinário e Gerente de Produtos da Datamars Trutest",
-      photo: "assets/speakers/ernesto.jpg"
+      photo: "assets/speakers/ernesto2.jpg"
     },
     {
       //5
-      name: "Andre Navarro",
+      name: "André Navarro",
       enterprise: "Gerente Distrital na Alta Genetics",
       photo: "assets/speakers/andre.jpg"
     },
@@ -81,63 +82,71 @@ export class Schedule {
       enterprise: "Pastus Agrotecnologia",
       photo: "assets/speakers/felipe.jpg"
     },
+    // {
+    //   //7
+    //   name: "IBGE",
+    //   enterprise: null,
+    //   photo: "assets/speakers/ibge.png"
+    // },
+    // {
+    //   //8
+    //   name: "SEBRAE-AC",
+    //   enterprise: null,
+    //   photo: "assets/speakers/sebrae.png"
+    // },
     {
       //7
-      name: "IBGE",
-      enterprise: null,
-      photo: "assets/speakers/ibge.png"
+      name: "Jaílson Barbosa",
+      enterprise: "SEBRAE-AC",
+      photo: "assets/speakers/jailson.jpg"
     },
     {
       //8
-      name: "SEBRAE-AC",
-      enterprise: null,
-      photo: "assets/speakers/sebrae.png"
+      name: "Dr. Judson Valentim",
+      enterprise: "EMBRAPA-AC",
+      photo: "assets/speakers/judson.jpg"
     },
     {
       //9
-      name: "Jaílson Barbosa",
-      enterprise: "SEBRAE-AC"
+      name: "Prof. Vadick Fernandez Romero ",
+      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru",
+      photo: "assets/speakers/vadick.jpg"
     },
     {
       //10
-      name: "Dr. Judson Valentim",
-      enterprise: "EMBRAPA-AC"
+      name: "Prof. Juan Tomás Bejarano Alvaréz",
+      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru",
+      photo: "assets/speakers/juan.jpg"
     },
     {
       //11
-      name: "Prof. Vadick Fernandez Romero ",
-      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
+      name: "Sra. Maria do Carmo",
+      enterprise: "Produtor rural",
+      photo: "assets/speakers/maria2.jpg"
     },
     {
       //12
-      name: "Prof. Juan Tomás Bejarano Alvaréz",
-      enterprise: "Universidad Nacional Amazonica de Madre de Dios – UNAMAD - Peru"
+      name: "Med. Vet. Jean Paulo Gotelip",
+      enterprise: "Norte Rebanho",
+      photo: "assets/speakers/jean.jpg"
     },
     {
       //13
-      name: "Sra. Maria do Carmo",
+      name: "Sr. Maurício Gomes",
       enterprise: "Produtor rural",
-      // photo: "assets/speakers/moacyr.jpeg"
+      photo: "assets/speakers/mauricio.jpg"
     },
     {
       //14
-      name: "Med. Vet. Jean Paulo Cabral",
-      enterprise: "Norte Rebanho"
+      name: "Sra. Andreza Scherlosk",
+      enterprise: "Produtora rural",
+      photo: "assets/speakers/andrezza.jpg"
     },
     {
       //15
-      name: "Sr. Maurício Gomes",
-      enterprise: "Produtor rural"
-    },
-    {
-      //16
-      name: "Sra. Andreza Scherlosk",
-      enterprise: "Produtora rural"
-    },
-    {
-      //17
       name: "Sr. Rodrigo Novaes",
-      enterprise: "Produtor rural"
+      enterprise: "Produtor rural",
+      photo: "assets/speakers/rodrigo.jpg"
     }
   ]
 
@@ -170,21 +179,21 @@ export class Schedule {
         {
           startTime: "09:30 - 10:00",
           title: "Sucessão Familiar em Propriedades Rurais",
-          speaker: [this.palestrantes[9].name],
+          speaker: [this.palestrantes[7].name],
           type: "palestra",
           description: null
         },
         {
           startTime: "10:00 - 11:00",
           title: "Quais as vantagens e os desafios da utilização da transferência de embriões em gado leiteiro? ",
-          speaker: [this.palestrantes[14].name],
+          speaker: [this.palestrantes[12].name],
           type: "palestra",
           description: null
         },
         {
           startTime: "11:00 - 12:00",
           title: "Pecuária Leiteira no Acre: Histórico, desafios e oportunidades ",
-          speaker: [this.palestrantes[10].name],
+          speaker: [this.palestrantes[8].name],
           type: "pausa",
           description: null
         },
@@ -205,7 +214,7 @@ export class Schedule {
         {
           startTime: "15:00 - 16:10",
           title: "Controle biológico de carrapatos com fungos ",
-          speaker: [this.palestrantes[11].name],
+          speaker: [this.palestrantes[9].name],
           type: "workshop",
           description: null
         },
@@ -219,7 +228,7 @@ export class Schedule {
         {
           startTime: "16:30 - 17:30",
           title: "Protocolos IATF na Pecuária Leiteira: utilização e benefícios",
-          speaker: [this.palestrantes[12].name],
+          speaker: [this.palestrantes[10].name],
           type: "palestra",
           description: null
         },
@@ -276,10 +285,10 @@ export class Schedule {
           startTime: "15:00 - 16:00",
           title: "Experiências do campo – Produtores de leite do Acre",
           speaker: [
+            this.palestrantes[11].name,
             this.palestrantes[13].name,
-            this.palestrantes[15].name,
-            this.palestrantes[16].name,
-            this.palestrantes[17].name
+            this.palestrantes[14].name,
+            this.palestrantes[15].name
           ],
           type: "palestra",
           description: null
