@@ -121,7 +121,7 @@ export class Schedule {
     {
       //11
       name: "Sra. Maria do Carmo",
-      enterprise: "Produtor rural",
+      enterprise: "Produtora rural",
       photo: "assets/speakers/maria2.jpg"
     },
     {
